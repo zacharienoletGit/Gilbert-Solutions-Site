@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zacharienoletgit.github.io/Gilbert-Solutions-Site/sitemap.xml
