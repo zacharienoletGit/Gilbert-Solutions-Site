@@ -5,8 +5,8 @@ Site vitrine d'une page pour Gilbert, automatisation par IA pour les PME du Cent
 ## Structure
 
 - `index.html` : la page complète (HTML, CSS et JavaScript inclus, sans dépendance externe).
-- `assets/gilbert-mark.svg`, `assets/favicon.svg` : le logo vectoriel.
-- `assets/og-image.png` : l'image affichée quand le lien est partagé (LinkedIn, Facebook, Messenger).
+- `assets/gilbert-mark.svg`, `assets/favicon.svg` : le cavalier vectoriel et le favicon.
+- `assets/gilbert-hero-direction.png` : le visuel du héros et l'image affichée quand le lien est partagé.
 - Les polices Bricolage Grotesque et Source Sans 3 sont intégrées dans `index.html`, donc la page fonctionne seule, même ouverte depuis le disque.
 - `.github/workflows/pages.yml` : publication automatique sur GitHub Pages à chaque poussée sur `main`.
 
