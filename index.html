@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6f5ef">
-<title>Gilbert — Des tâches en moins, du temps en plus</title>
-<meta name="description" content="Gilbert aide les PME du Centre-du-Québec à automatiser leurs tâches répétitives, un processus à la fois. Trois offres à prix fixe, formation incluse, et vous gardez le contrôle.">
+<title>Gilbert Solutions IA | Automatisation pour PME</title>
+<meta name="description" content="Gilbert accompagne les PME du Centre-du-Québec dans l’automatisation de tâches répétitives. Une tâche à la fois, avec un périmètre et un prix convenus avant de commencer.">
 <link rel="canonical" href="https://zacharienoletgit.github.io/Gilbert-Solutions-Site/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/gilbert-mark.svg">
@@ -13,15 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Gilbert — Solutions IA">
-<meta property="og:title" content="Gilbert — Des tâches en moins, du temps en plus">
-<meta property="og:description" content="Automatisation par IA pour les PME, un processus à la fois. Trois offres à prix fixe, formation incluse.">
+<meta property="og:title" content="Gilbert Solutions IA | Automatisation pour PME">
+<meta property="og:description" content="Automatisation pour PME du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
 <meta property="og:url" content="https://zacharienoletgit.github.io/Gilbert-Solutions-Site/">
 <meta property="og:image" content="https://zacharienoletgit.github.io/Gilbert-Solutions-Site/assets/gilbert-hero-direction.png">
 <meta property="og:image:width" content="1672">
 <meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gilbert — Des tâches en moins, du temps en plus">
-<meta name="twitter:description" content="Automatisation par IA pour les PME, un processus à la fois. Trois offres à prix fixe, formation incluse.">
+<meta name="twitter:title" content="Gilbert Solutions IA | Automatisation pour PME">
+<meta name="twitter:description" content="Automatisation pour PME du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
 <meta name="twitter:image" content="https://zacharienoletgit.github.io/Gilbert-Solutions-Site/assets/gilbert-hero-direction.png">
 
 
@@ -50,7 +50,7 @@ h2{font-size:clamp(34px,3.7vw,58px);line-height:1.07;font-weight:800;margin:0 0 
 h3{line-height:1.18}
 a{color:var(--moss);text-underline-offset:3px}
 :focus-visible{outline:3px solid var(--moss);outline-offset:4px;border-radius:3px}
-.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.wrap{max-width:1400px;margin:0 auto;padding-inline:24px}
 .skip-link{position:absolute;top:-60px;left:16px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px}
 .skip-link:focus{top:12px}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -82,16 +82,19 @@ header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.94);backdro
 .mobile-nav{display:none}
 
 /* héros */
-.hero{padding-block:clamp(54px,7vw,100px) 0;background:var(--paper)}
-.hero>.wrap{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);align-items:center;gap:38px clamp(32px,5vw,88px)}
-.hero-copy h1{max-width:12ch;margin-bottom:24px}
-.hero h1 em{font-style:normal;box-shadow:inset 0 -.24em var(--lime)}
+.hero{padding-block:clamp(24px,3vw,42px) 0;background:var(--paper)}
+.hero>.wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:30px clamp(32px,4.4vw,68px)}
+.hero-copy{position:relative;z-index:2;padding-block:28px 38px}
+.hero-copy h1{max-width:none;margin-bottom:24px;font-size:clamp(58px,6.15vw,92px);line-height:.94;letter-spacing:-.065em}
+.hero-line{display:block}
+.hero-line.highlight{position:relative;isolation:isolate;width:max-content;max-width:100%}
+.hero-line.highlight::after{content:"";position:absolute;z-index:-1;left:0;right:-.08em;bottom:.04em;height:.14em;background:var(--lime)}
 .lead{color:var(--ink-2);max-width:56ch;font-size:clamp(19px,1.5vw,22px);line-height:1.5;margin:22px 0 28px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-note{margin:18px 0 0;color:var(--ink-3);font-size:14px}
-.hero-art{width:min(100%,470px);aspect-ratio:4/5;justify-self:end;overflow:hidden;margin:0;border:1px solid var(--rule);border-radius:28px;background:var(--lime);box-shadow:var(--shadow)}
-.hero-art picture,.hero-art img{display:block;width:100%;height:100%}
-.hero-art img{object-fit:cover;object-position:right center}
+.hero-art{--hero-overhang:max(24px,calc((100vw - 1400px)/2 + 24px));position:relative;align-self:stretch;width:calc(100% + var(--hero-overhang));height:clamp(520px,48vw,680px);justify-self:stretch;overflow:visible;margin:0 calc(0px - var(--hero-overhang)) 0 0;background:transparent}
+.hero-art::before{content:"";position:absolute;inset:0;background:var(--lime);clip-path:polygon(44% 53%,82% 0,100% 0,100% 100%,78% 100%)}
+.hero-art svg{position:absolute;z-index:1;top:50%;right:0;width:min(84%,640px);height:auto;max-width:none;transform:translateY(-50%);overflow:visible;filter:drop-shadow(0 18px 14px rgba(16,23,19,.12))}
 
 /* illustration : un exemple de processus automatisé */
 .flow{max-width:520px;min-width:0;margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:28px;box-shadow:var(--shadow);padding:26px;display:flex;flex-direction:column;gap:14px}
@@ -229,7 +232,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 }
 
 @media(max-width:1000px){
-  .hero>.wrap{grid-template-columns:minmax(0,1fr) minmax(290px,.85fr)}
+  .hero>.wrap{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:28px}
+  .hero-art{height:500px}
   .proof{grid-template-columns:repeat(2,1fr)}
   .proof div:nth-child(3){padding-left:0;border-left:0;border-top:1px solid var(--rule)}
   .proof div:nth-child(4){border-top:1px solid var(--rule)}
@@ -244,9 +248,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   .mobile-nav nav{position:absolute;top:calc(100% + 12px);right:0;display:grid;width:min(280px,calc(100vw - 48px));gap:2px;padding:12px;border:1px solid var(--rule);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
   .mobile-nav nav a{min-height:44px;display:flex;align-items:center;padding:10px 12px;border-radius:8px;color:var(--ink);font-size:15px;font-weight:600;text-decoration:none}
   .mobile-nav nav a:hover{background:var(--lime-soft)}
-  .hero>.wrap{grid-template-columns:1fr}
-  .hero-copy h1{max-width:13ch}
-  .hero-art{width:min(100%,480px);aspect-ratio:1;justify-self:center}
+  .hero>.wrap{grid-template-columns:1fr;gap:0}
+  .hero-copy{padding-block:24px 18px}
+  .hero-art{--hero-overhang:24px;width:calc(100% + 24px);height:clamp(320px,48vw,440px);min-height:320px;justify-self:stretch;margin-right:-24px}
+  .hero-art::before{clip-path:polygon(27% 48%,68% 0,100% 0,100% 100%,70% 100%)}
+  .hero-art svg{right:2%;width:min(68%,430px)}
   .flow{width:min(100%,500px);margin-inline:auto}
   #methode .method-layout{grid-template-columns:1fr}
   #pourqui .cards,.offers{grid-template-columns:1fr}
@@ -260,9 +266,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   .hd{min-height:72px}
   .brand-mark{width:42px;height:42px}
   .brand .g{font-size:23px}
-  .hero-copy h1{font-size:clamp(45px,11vw,66px)}
+  .hero-copy h1{font-size:clamp(32px,9.8vw,58px);line-height:.96}
   .cta .btn{width:100%}
-  .hero-art{border-radius:22px}
+  .hero-art{--hero-overhang:18px;width:calc(100% + 18px);height:clamp(250px,76vw,340px);min-height:250px;margin-right:-18px}
+  .hero-art::before{clip-path:polygon(22% 48%,62% 0,100% 0,100% 100%,68% 100%)}
+  .hero-art svg{right:2%;width:min(68%,340px)}
   .flow{border-radius:22px;padding:20px}
   .proof{grid-template-columns:1fr}
   .proof div,.proof div+div,.proof div:nth-child(3){padding:20px 0;border:0;border-top:1px solid var(--rule)}
@@ -307,11 +315,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       "@type": "FAQPage",
       "mainEntity": [
         {"@type": "Question", "name": "Nos données sont sensibles. Où vont-elles ?", "acceptedAnswer": {"@type": "Answer", "text": "On définit avec vous l'hébergement, les accès, la confidentialité et l'usage des modèles d'IA avant de travailler avec vos fichiers. Rien ne part vers un outil externe sans votre accord."}},
-        {"@type": "Question", "name": "Est-ce que l'IA va répondre à mes clients à ma place ?", "acceptedAnswer": {"@type": "Answer", "text": "Seulement si vous le décidez. Par défaut, elle prépare un brouillon, une soumission ou un résumé, et vous approuvez en un clic."}},
-        {"@type": "Question", "name": "Combien de temps avant que ça fonctionne ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic prend une demi-journée. Une première automatisation est en service en deux à trois semaines."}},
-        {"@type": "Question", "name": "Et si ça brise ?", "acceptedAnswer": {"@type": "Answer", "text": "Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille et on corrige avant que vous le remarquiez."}},
+        {"@type": "Question", "name": "Est-ce que l'IA va répondre à mes clients à ma place ?", "acceptedAnswer": {"@type": "Answer", "text": "Par défaut, l’IA prépare un brouillon, une soumission ou un résumé; vous choisissez ce qui est envoyé. Les modalités de validation sont définies avec vous et peuvent évoluer selon vos besoins."}},
+        {"@type": "Question", "name": "Combien de temps avant que ça fonctionne ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic prend une demi-journée et permet de repartir avec un plan. Une première automatisation prend généralement deux à trois semaines, selon le périmètre et les outils utilisés. Le calendrier est confirmé après le diagnostic."}},
+        {"@type": "Question", "name": "Et si ça brise ?", "acceptedAnswer": {"@type": "Answer", "text": "Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. Les modalités de surveillance et les validations sont définies avec vous."}},
         {"@type": "Question", "name": "Et si on arrête le suivi mensuel ?", "acceptedAnswer": {"@type": "Answer", "text": "Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation."}},
-        {"@type": "Question", "name": "Pourquoi si peu cher ?", "acceptedAnswer": {"@type": "Answer", "text": "Une automatisation bien ciblée prend 20 à 30 heures, pas 200, et on n'a pas de bureau ni d'équipe de vente à payer."}}
+        {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mandat est défini autour d’un processus et d’un livrable précis. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}}
       ]
     }
   ]
@@ -357,26 +365,32 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     <div class="wrap">
       <div class="hero-copy">
         <p class="kick">Automatisation par IA · PME</p>
-        <h1>Les tâches répétitives, <em>faites une fois pour toutes.</em></h1>
-        <p class="lead">Courriels, soumissions, facturation et rapports : on automatise un processus à la fois, à prix fixe, avec la formation pour que vous restiez maîtres de l'outil.</p>
+        <h1 aria-label="Automatiser les tâches répétitives, une à la fois.">
+          <span class="hero-line" aria-hidden="true">Automatiser</span>
+          <span class="hero-line" aria-hidden="true">les tâches</span>
+          <span class="hero-line" aria-hidden="true">répétitives,</span>
+          <span class="hero-line highlight" aria-hidden="true">une à la fois.</span>
+        </h1>
+        <p class="lead">Courriels, soumissions, facturation, rapports : on examine une tâche qui vous ralentit et on vérifie avec vous si elle peut être automatisée avec vos outils actuels.</p>
         <div class="cta">
-          <a class="btn lime" href="#contact">Parlons de votre semaine</a>
+          <a class="btn" href="#contact">Décrire une tâche <span aria-hidden="true">→</span></a>
           <a class="btn ghost" href="#offres">Voir les trois offres</a>
         </div>
         <p class="hero-note">Sur place dans un rayon de 100 km de Victoriaville · À distance partout.</p>
       </div>
 
       <figure class="hero-art" aria-hidden="true">
-        <picture>
-          <source media="(max-width:960px)" srcset="assets/gilbert-mark.svg">
-          <img src="assets/gilbert-hero-direction.png" alt="" fetchpriority="high" decoding="async">
-        </picture>
+        <svg viewBox="0 0 100 100" focusable="false">
+          <path fill="#101713" d="M60 10c3 4 6 10 7 16 9 5 15 15 17 26l2 30H48c0-9-2-15-8-21-6-4-16-7-24-8-6-1-9-5-7-10 1-3 5-5 9-5 6 0 12 1 17-2 5-3 7-8 9-13l5-11 5 10z"/>
+          <circle cx="57" cy="38" r="3.2" fill="#c8f04a"/>
+          <path fill="#c8f04a" d="M19 46c2 0 3 1 3 2.5S21 51 19 51s-3-1-3-2.5 1-2.5 3-2.5z"/>
+        </svg>
       </figure>
 
       <div class="proof">
-        <div><b>Un processus à la fois</b><span>pas de « transformation numérique », une tâche précise qui disparaît</span></div>
-        <div><b>Prix public</b><span>trois forfaits affichés, pas de devis mystère</span></div>
-        <div><b>Vous gardez tout</b><span>les automatisations vous appartiennent et tournent chez vous ou au Canada</span></div>
+        <div><b>Un processus à la fois</b><span>On commence par une tâche précise et on définit le périmètre ensemble.</span></div>
+        <div><b>Prix affichés</b><span>Les prix et les livrables sont indiqués avant le début du mandat.</span></div>
+        <div><b>Vous gardez la main</b><span>Vous conservez les accès et la documentation de l’automatisation livrée.</span></div>
         <div><b>Proche de vous</b><span>sur place à Victoriaville, Plessisville et dans la région ; à distance partout</span></div>
       </div>
     </div>
@@ -385,11 +399,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   <section id="pourqui">
     <div class="wrap">
       <h2 class="reveal">Pour qui</h2>
-      <p class="sub reveal">Vous vous reconnaissez dans une de ces phrases ? C'est exactement le genre de chose qu'on règle.</p>
+      <p class="sub reveal">Voici quelques situations où une automatisation peut être utile.</p>
       <div class="cards">
-        <div class="card reveal"><h3>« Je passe mes soirées à répondre aux mêmes courriels. »</h3><p>Demandes de prix, disponibilités, suivis de commande : un assistant trie, prépare la réponse, vous validez en un clic.</p></div>
-        <div class="card reveal"><h3>« Les soumissions prennent deux jours et on en perd. »</h3><p>Un formulaire, vos règles de prix, un PDF propre généré en minutes — et le suivi qui part tout seul.</p></div>
-        <div class="card reveal"><h3>« Quelqu'un retape les mêmes chiffres dans trois logiciels. »</h3><p>Commandes, factures, feuilles de temps, rapports du lundi : on connecte ce qui ne se parle pas.</p></div>
+        <div class="card reveal"><h3>« Je passe mes soirées à répondre aux mêmes courriels. »</h3><p>Selon vos règles, un assistant peut classer ces messages et préparer une réponse que vous vérifiez avant l’envoi.</p></div>
+        <div class="card reveal"><h3>« Les soumissions prennent deux jours et on en perd. »</h3><p>Un formulaire peut reprendre vos règles de prix, préparer une soumission PDF et planifier un rappel de suivi.</p></div>
+        <div class="card reveal"><h3>« Quelqu'un retape les mêmes chiffres dans trois logiciels. »</h3><p>On peut relier vos outils pour réduire les saisies répétées entre commandes, factures et rapports.</p></div>
       </div>
     </div>
   </section>
@@ -397,7 +411,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   <section id="offres">
     <div class="wrap">
       <h2 class="reveal">Trois offres, trois prix</h2>
-      <p class="sub reveal">Chaque forfait a un livrable clair, une durée, et un prix qu'on connaît avant de commencer. Taxes en sus.</p>
+      <p class="sub reveal">Chaque offre précise le livrable, la durée et le prix. Pour les projets dont le coût varie, le montant est confirmé après le diagnostic. Taxes en sus.</p>
       <div class="offers">
         <article class="offer reveal">
           <span class="tag">Pour commencer</span>
@@ -405,33 +419,33 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <div class="dur">4 heures · sur place ou à distance</div>
           <div class="price">490 $ <small>crédités sur la première automatisation</small></div>
           <ul>
-            <li>On suit votre semaine : qui fait quoi, dans quel logiciel, combien de temps</li>
-            <li>Les trois tâches les plus payantes à automatiser, avec les heures récupérées estimées</li>
-            <li>Un plan d'une page, que vous pouvez faire avec nous ou sans nous</li>
+            <li>On passe en revue votre semaine, les tâches et les outils utilisés.</li>
+            <li>Trois tâches à évaluer en priorité, avec une estimation du temps qu’elles mobilisent.</li>
+            <li>Un plan d’une page avec les options et les prochaines étapes.</li>
           </ul>
           <a class="btn ghost offer-cta" href="#contact">En parler ↗</a>
           <div class="sub-badge"><b>Aide possible</b>Espace PME Innovation Centre-du-Québec (Destination Entreprise) : jusqu'à 50 % des coûts admissibles pour les PME de la région</div>
         </article>
         <article class="offer hi reveal">
-          <span class="tag">Le plus demandé</span>
+          <span class="tag">Du cadrage à la formation</span>
           <h3>Première automatisation</h3>
           <div class="dur">2 à 3 semaines · un processus complet</div>
           <div class="price">1 900 $ <small>à 3 900 $ selon la complexité, fixé après le diagnostic</small></div>
           <ul>
             <li>Un processus automatisé de bout en bout : courriels, soumissions, facturation, rapports, saisie, rendez-vous</li>
-            <li>Branché sur vos outils actuels (Outlook ou Gmail, Excel, votre logiciel comptable, votre CRM)</li>
+            <li>Connecté à vos outils actuels (Outlook ou Gmail, Excel, comptabilité, CRM).</li>
             <li>Formation de 2 h, guide d'une page, 30 jours de correctifs inclus</li>
           </ul>
           <a class="btn lime offer-cta" href="#contact">Discuter du projet ↗</a>
           <div class="sub-badge"><b>Aide possible</b>Formation subventionnable jusqu'à 50 à 75 % (Services Québec, MFOR) · ESSOR 1C pour les entreprises de 2,5 M$ et plus de chiffre d'affaires</div>
         </article>
         <article class="offer reveal">
-          <span class="tag">Pour que ça dure</span>
+          <span class="tag">Option de suivi</span>
           <h3>Suivi mensuel</h3>
           <div class="dur">Sans engagement après 3 mois</div>
           <div class="price">149 $ <small>à 349 $ par mois selon le nombre d'automatisations</small></div>
           <ul>
-            <li>Surveillance : si une automatisation bloque, on le sait avant vous</li>
+            <li>Surveillance et avis si un blocage est détecté.</li>
             <li>Correctifs, petites améliorations et coûts d'hébergement et d'IA inclus jusqu'au seuil convenu</li>
             <li>Une heure par mois pour ajouter, ajuster ou former une nouvelle personne</li>
           </ul>
@@ -445,22 +459,22 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   <section id="methode">
     <div class="wrap">
       <h2 class="reveal">Comment on travaille</h2>
-      <p class="sub reveal">Le même chemin pour chaque client, parce que c'est lui qui fait que ça marche.</p>
+      <p class="sub reveal">On cadre le besoin, on teste le processus et on vous remet les outils pour en garder la maîtrise.</p>
       <div class="method-layout">
       <div class="steps">
-        <div class="step reveal"><h3>On regarde votre vraie semaine</h3><p>Pas une démo : vos courriels, vos fichiers, vos écrans. On compte les minutes avant de promettre des heures.</p></div>
-        <div class="step reveal"><h3>On automatise un seul processus</h3><p>Le plus payant d'abord. Il est en service avant qu'on parle du suivant.</p></div>
-        <div class="step reveal"><h3>Vous validez, l'outil exécute</h3><p>Tout ce qui sort vers un client passe par vous tant que vous le voulez. L'IA propose, vous décidez.</p></div>
-        <div class="step reveal"><h3>On vous laisse autonomes</h3><p>Formation, guide d'une page, accès complet. Si on disparaît demain, vos automatisations continuent de tourner.</p></div>
+        <div class="step reveal"><h3>On regarde votre vraie semaine</h3><p>On observe comment la tâche se déroule dans vos outils, puis on estime le temps qu’elle mobilise et les contraintes à respecter.</p></div>
+        <div class="step reveal"><h3>On automatise un seul processus</h3><p>On définit le périmètre, les exceptions et les validations nécessaires avant de construire.</p></div>
+        <div class="step reveal"><h3>Vous validez, l'outil exécute</h3><p>Les messages et documents destinés à vos clients peuvent rester soumis à votre validation.</p></div>
+        <div class="step reveal"><h3>On vous laisse autonomes</h3><p>On vous remet une formation, un guide et les accès à l’automatisation livrée.</p></div>
       </div>
       <figure class="flow reveal" aria-label="Exemple d'un processus automatisé par Gilbert">
-        <div class="flow-head"><span>Exemple · demande de prix</span><b>En service en 3 semaines</b></div>
+        <div class="flow-head"><span>Exemple · demande de prix</span><b>Scénario illustratif</b></div>
         <div class="node"><i>01</i><div><b>Un client écrit pour un prix</b><small>Le courriel arrive dans votre boîte Outlook ou Gmail, comme d'habitude.</small></div></div>
         <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="node ai"><i>02</i><div><b>Gilbert prépare la soumission</b><small>Vos règles de prix, votre gabarit, un PDF propre et un brouillon de réponse.</small></div></div>
+        <div class="node ai"><i>02</i><div><b>Le système prépare la soumission</b><small>Vos règles de prix, votre gabarit, un PDF propre et un brouillon de réponse.</small></div></div>
         <div class="flow-arrow" aria-hidden="true"></div>
-        <div class="node"><i>03</i><div><b>Vous validez, ça part</b><small>Un clic. Le suivi se planifie tout seul une semaine plus tard.</small></div></div>
-        <figcaption><strong>Deux jours → quelques minutes.</strong>Et c'est vous qui décidez ce qui sort.</figcaption>
+        <div class="node"><i>03</i><div><b>Vous vérifiez avant l’envoi</b><small>Vous confirmez l’envoi. Un rappel peut être prévu une semaine plus tard.</small></div></div>
+        <figcaption><strong>Le délai dépend du contexte.</strong> Vous gardez la décision d’envoyer.</figcaption>
       </figure>
       </div>
     </div>
@@ -471,7 +485,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <div class="reveal">
         <h2>Pourquoi Gilbert</h2>
         <p>Gilbert, c'est deux associés du Centre-du-Québec. Zacharie développe des outils sur mesure pour des entreprises depuis le cégep : un configurateur de produits et de soumissions pour un fabricant d'équipements, des applications, des intégrations entre logiciels. Avant ça, deux ans à expliquer de la technologie à des clients qui n'en voulaient pas plus que nécessaire — c'est encore la règle ici.</p>
-        <p>On est petits, et c'est voulu : pas d'intermédiaire, pas de junior facturé au prix d'un senior, pas d'abonnement à vie. Le nom vient du cheval, le premier outil qui a allégé le travail des gens. On essaie de faire pareil avec vos tâches.</p>
+        <p>Le nom fait référence au cheval, un partenaire de travail qui a aidé les gens à accomplir leurs tâches. Ici, l’objectif est de garder la technologie au service du travail réel.</p>
       </div>
       <div class="stack reveal">
         <h3>Ce qu'on branche</h3>
@@ -487,7 +501,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   <section id="subventions">
     <div class="wrap">
       <h2 class="reveal">Les aides qu'on connaît</h2>
-      <p class="sub reveal">Soyons francs : la plupart des programmes visent les entreprises de plus de 2,5 M$ de chiffre d'affaires. C'est pour ça que nos prix tiennent sans subvention. Quand vous y avez droit, on vous le dit et on prépare le dossier.</p>
+      <p class="sub reveal">Les programmes ne s’appliquent pas à toutes les entreprises. Plusieurs visent les PME dont le chiffre d’affaires dépasse 2,5 M$. Nous indiquons ici les critères connus et vérifions l’admissibilité auprès de l’organisme. Les prix affichés ne reposent pas sur l’obtention d’une subvention.</p>
       <p class="table-hint">Faites défiler le tableau pour voir toutes les conditions.</p>
       <div class="tbl reveal" role="region" aria-label="Tableau des aides possibles" tabindex="0"><table>
         <thead><tr><th scope="col">Programme</th><th scope="col">Ce qu'il couvre</th><th scope="col">Montant</th><th scope="col">Conditions principales</th></tr></thead>
@@ -507,11 +521,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     <div class="wrap faq">
       <h2 class="reveal">Questions qu'on nous pose</h2>
       <details class="reveal"><summary>Nos données sont sensibles. Où vont-elles ?</summary><p>On définit avec vous l'hébergement, les accès, la confidentialité et l'usage des modèles d'IA avant de travailler avec vos fichiers. Rien ne part vers un outil externe sans votre accord.</p></details>
-      <details class="reveal"><summary>Est-ce que l'IA va répondre à mes clients à ma place ?</summary><p>Seulement si vous le décidez. Par défaut, elle prépare : un brouillon, une soumission, un résumé. Vous approuvez en un clic. On enlève l'étape de validation quand vous êtes à l'aise, pas avant.</p></details>
-      <details class="reveal"><summary>Combien de temps avant que ça fonctionne ?</summary><p>Le diagnostic prend une demi-journée et vous repartez avec le plan. Une première automatisation est en service en deux à trois semaines, formation comprise. On ne commence pas la suivante avant que celle-là tourne.</p></details>
-      <details class="reveal"><summary>Et si ça brise ?</summary><p>Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille en continu et on corrige souvent avant que vous le remarquiez. Et comme l'IA propose sans décider, un pépin bloque une tâche, il ne l'envoie pas à vos clients.</p></details>
+      <details class="reveal"><summary>Est-ce que l'IA va répondre à mes clients à ma place ?</summary><p>Par défaut, l’IA prépare un brouillon, une soumission ou un résumé; vous choisissez ce qui est envoyé. Les modalités de validation sont définies avec vous et peuvent évoluer selon vos besoins.</p></details>
+      <details class="reveal"><summary>Combien de temps avant que ça fonctionne ?</summary><p>Le diagnostic prend une demi-journée et vous repartez avec le plan. Une première automatisation prend généralement deux à trois semaines, selon le périmètre et les outils utilisés. Le calendrier est confirmé après le diagnostic.</p></details>
+      <details class="reveal"><summary>Et si ça brise ?</summary><p>Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. </p></details>
       <details class="reveal"><summary>Et si on arrête le suivi mensuel ?</summary><p>Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation. Les frais éventuels d'hébergement et d'IA sont ensuite payés directement à vos fournisseurs.</p></details>
-      <details class="reveal"><summary>Pourquoi si peu cher ?</summary><p>Parce qu'une automatisation bien ciblée prend 20 à 30 heures, pas 200, et qu'on n'a pas de bureau ni d'équipe de vente à payer. Quand un projet dépasse ce qu'on peut porter, on le dit et on vous présente quelqu'un.</p></details>
+      <details class="reveal"><summary>Comment les prix sont-ils fixés ?</summary><p>Chaque mandat est défini autour d’un processus et d’un livrable précis. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit.</p></details>
     </div>
   </section>
 
@@ -519,13 +533,13 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     <div class="wrap contact">
       <div class="reveal">
         <h2>Parlons de votre semaine</h2>
-        <p class="sub">Vingt minutes suffisent pour savoir si on peut vous aider. Pas de présentation, pas de vendeur : Zacharie regarde avec vous la tâche qui vous fait perdre le plus de temps.</p>
-        <p>Un simple courriel suffit pour commencer la conversation. Dites-nous quelle tâche vous prend le plus de temps.</p>
+        <p class="sub">Un premier échange de 20 minutes pour comprendre la tâche, vos outils et vos contraintes. On vous explique ce qui peut être automatisé et le coût d’un éventuel mandat.</p>
+        <p>Écrivez-nous en décrivant la tâche qui vous prend le plus de temps. On vous répondra pour préciser la suite, sans engagement.</p>
       </div>
       <div class="contact-card reveal">
         <span class="contact-icon" aria-hidden="true">↗</span>
-        <h3>Racontez-nous votre semaine.</h3>
-        <p>On regarde avec vous où l'automatisation pourrait vraiment aider.</p>
+        <h3>Décrivez la tâche qui revient le plus souvent.</h3>
+        <p>On regarde avec vous si l’automatisation peut convenir à cette tâche.</p>
         <a class="btn lime" href="mailto:zacharie_nolet@hotmail.fr?subject=Parlons%20automatisation%20avec%20Gilbert&amp;body=Bonjour%20Zacharie%2C%0A%0ALa%20t%C3%A2che%20qui%20me%20prend%20le%20plus%20de%20temps%20%3A%20%0A%0AMon%20entreprise%20%3A%20%0AMes%20logiciels%20%3A%20%0A%0AMerci%20!">Écrire à Zacharie ↗</a>
         <a class="contact-email" href="mailto:zacharie_nolet@hotmail.fr">zacharie_nolet@hotmail.fr</a>
       </div>
