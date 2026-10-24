@@ -1,8 +1,8 @@
 # Handoff
 
-## Current handoff — Design vers planification
+## Current handoff — Planification vers implémentation
 
-La conception et ADR-001 sont approuvées. La planification doit suivre les quatre lots de `decisions/engineering-manager/lead-generation-security.md` et préserver la compatibilité de la page sans JavaScript jusqu'au formulaire.
+La conception et ADR-001 sont approuvées. Implémenter les quatre lots de `decisions/engineering-manager/lead-generation-security.md`, dans l'ordre. Préserver le courriel de secours et ne pas publier de secret. Avant la vérification, mettre à jour la décision SDE et celle de DBA (pas de base de données permanente : KV de limite seulement).
 
 ## Decisions
 
