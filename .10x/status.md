@@ -1,0 +1,7 @@
+# Gilbert — statut
+
+- **Fonctionnalité active :** `lead-generation-security`
+- **Phase :** Design proposé — en attente de l'approbation du document de conception avant toute modification du site.
+- **Portée approuvée :** retrait de la page doublon, migration prête pour Cloudflare Pages, formulaire sécurisé, performance, pages légales séparées, en-têtes et CTA mobile.
+- **Automatisation :** vérification officielle des aides, lundi et jeudi à 09:00 America/Toronto.
+
