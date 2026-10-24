@@ -1,8 +1,8 @@
 # Handoff
 
-## Current handoff — Design vers implémentation
+## Current handoff — Strategy vers design
 
-Le site est une page HTML statique publiée par GitHub Actions. Aucun secret, backend ou formulaire ne figure dans le dépôt actuel. La conception propose Cloudflare Pages Functions pour `POST /api/contact`, avec Turnstile, limites KV et Resend configurés exclusivement comme secrets Cloudflare. Lire le spec et ADR 001 avant l'implémentation.
+Le site est une page HTML statique publiée par GitHub Actions. Aucun secret, backend ou formulaire ne figure dans le dépôt actuel. Le choix build/buy est arrêté : Cloudflare Pages Functions pour `POST /api/contact`, avec Turnstile, limites KV et Resend configurés exclusivement comme secrets Cloudflare. L'architecte doit finaliser l'ADR 001 et les limites de sécurité avant l'implémentation.
 
 ## Decisions
 
