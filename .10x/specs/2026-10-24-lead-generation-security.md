@@ -1,6 +1,6 @@
 # Design — conversion et sécurité du site Gilbert
 
-**Statut :** Proposé
+**Statut :** Approuvé
 **Fonctionnalité :** `lead-generation-security`
 **Date :** 2026-10-24
 

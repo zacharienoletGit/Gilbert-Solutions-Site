@@ -1,6 +1,6 @@
 # ADR-001: Formulaire de contact via Cloudflare Pages Functions
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-10-24
 **Feature:** lead-generation-security
 **Author:** 10x-Team (Architect + Staff Engineer)

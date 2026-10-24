@@ -1,8 +1,8 @@
 # Handoff
 
-## Current handoff — Strategy vers design
+## Current handoff — Design vers planification
 
-Le site est une page HTML statique publiée par GitHub Actions. Aucun secret, backend ou formulaire ne figure dans le dépôt actuel. Le choix build/buy est arrêté : Cloudflare Pages Functions pour `POST /api/contact`, avec Turnstile, limites KV et Resend configurés exclusivement comme secrets Cloudflare. L'architecte doit finaliser l'ADR 001 et les limites de sécurité avant l'implémentation.
+La conception et ADR-001 sont approuvées. La planification doit suivre les quatre lots de `decisions/engineering-manager/lead-generation-security.md` et préserver la compatibilité de la page sans JavaScript jusqu'au formulaire.
 
 ## Decisions
 
