@@ -38,13 +38,13 @@ Brancher le domaine sur GitHub Pages tout de suite, en gardant la zone DNS et le
 - L'ancienne adresse `github.io` redirige vers le domaine.
 
 ### Negative
-- Le forfait WHC (12,99 $ par mois avant taxes) ne sert plus qu'au DNS et au courriel.
+- Le forfait d'hébergement WHC ne sert plus qu'au DNS et au courriel.
 - L'enregistrement SPF contient encore `+a`, qui désigne maintenant les adresses de GitHub. C'est sans effet sur la livraison, mais inutile : à retirer lors d'un prochain passage dans la zone.
 - GitHub Pages ne permet pas d'en-têtes de sécurité (HSTS, CSP) : ce point reste couvert par ADR-001.
 
 ### Risks
 - **Migration Cloudflare Pages :** un domaine apex sur Cloudflare Pages exige que la zone soit chez Cloudflare. Le jour de la bascule, recréer d'abord dans Cloudflare les enregistrements du courriel (MX, `mail` en A sans proxy, SPF, DKIM `default._domainkey`, `_dmarc`), puis seulement changer les serveurs de noms. Garder GitHub Pages actif comme retour arrière.
-- **Facture WHC impayée :** elle suspendrait le DNS et le courriel, donc aussi le site. Échéance connue : 2026-11-22.
+- **Forfait WHC non renouvelé :** une suspension couperait le DNS et le courriel, donc aussi le site. Garder le renouvellement à jour.
 - **DMARC à `p=none` :** aucune protection contre l'usurpation pour l'instant. Passer à `quarantine` après quelques semaines d'envois sans incident.
 
 ## Dependencies

@@ -16,6 +16,6 @@
 - **Vérifié :** `https://gilbert-solution.ca` répond 200, `http://` redirige en 301 vers HTTPS, `www` redirige vers l'apex, la page annonce la nouvelle adresse canonique.
 - **Reste à faire (propriétaire) :**
   - Créer la redirection `zacharie@gilbert-solution.ca` vers Gmail dans cPanel, puis ajouter l'adresse dans « Envoyer des courriels en tant que » de Gmail (SMTP `mail.gilbert-solution.ca`, port 465, SSL).
-  - Payer la facture WHC de l'hébergement principal avant le 2026-11-22.
+  - Garder le forfait WHC à jour : il porte le DNS et le courriel.
 - **Impact sur `lead-generation-security` :** la bascule vers Cloudflare Pages doit suivre l'ordre décrit dans les risques d'ADR-002.
 
