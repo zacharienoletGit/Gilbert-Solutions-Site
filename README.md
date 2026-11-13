@@ -22,4 +22,4 @@ npx http-server . -p 8080
 
 1. Dans les réglages du dépôt, section **Pages**, choisir **GitHub Actions** comme source.
 2. Fusionner sur `main`. Le site est servi à `https://gilbert-solution.ca/`.
-3. Pour un domaine personnalisé, ajouter un fichier `CNAME` à la racine et remplacer l'adresse dans les balises `canonical`, `og:url`, `og:image` et dans `sitemap.xml`.
+3. Le domaine personnalisé `gilbert-solution.ca` est inscrit dans **Settings → Pages** (pas de fichier `CNAME` : il est ignoré quand la source est GitHub Actions). La zone DNS et le courriel sont chez WHC ; voir `.10x/adrs/002-domaine-github-pages-courriel-whc.md` avant de modifier un enregistrement.
