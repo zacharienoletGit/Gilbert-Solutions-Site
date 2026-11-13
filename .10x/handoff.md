@@ -8,5 +8,14 @@ La conception et ADR-001 sont approuvées. Implémenter les quatre lots de `deci
 
 - Source de vérité du site : `index.html`.
 - `Gilbert.html` est une page doublon à retirer après vérification des liens entrants.
-- Le domaine personnalisé et les secrets restent à configurer dans Cloudflare, jamais dans Git.
+- Les secrets restent à configurer dans Cloudflare, jamais dans Git.
+- Le domaine personnalisé `gilbert-solution.ca` est déjà en service sur GitHub Pages depuis le 2026-11-12 (ADR-002). La zone DNS et le courriel sont chez WHC.
+
+## Contexte pour la migration Cloudflare (lot DevOps)
+
+Lire `adrs/002-domaine-github-pages-courriel-whc.md` et `decisions/devops/custom-domain-email.md` avant de toucher au DNS.
+
+- Un domaine apex sur Cloudflare Pages exige la zone chez Cloudflare : recréer d'abord MX, `mail` (A, sans proxy), SPF, DKIM et DMARC dans Cloudflare, puis changer les serveurs de noms.
+- Le courriel `zacharie@gilbert-solution.ca` sert à la prospection : aucune coupure acceptable.
+- Retour arrière : GitHub Pages reste configuré, il suffit de remettre les quatre enregistrements A.
 
