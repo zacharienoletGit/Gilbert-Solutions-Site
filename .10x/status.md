@@ -14,7 +14,8 @@
 - **Fait (branche `feature/cool-noether-o0iedv`) :** section `#demarrer` dans `index.html`, lien « Démarrer » dans les deux menus, mention dans le héros, les offres, les aides, la FAQ (deux questions, aussi dans le JSON-LD), le contact et les métadonnées.
 - **Offre de lancement :** le premier client ne paie rien (diagnostic et première automatisation), une seule place. Affichée à quatre endroits, tous marqués `data-premier-client`.
 - **Quand la place est prise :** retirer les quatre éléments `data-premier-client` de `index.html` (bandeau du haut, lien dans « Par où commencer », bloc au-dessus des offres, paragraphe du contact).
-- **Aucun autre nouveau prix :** les trois offres et leurs montants sont inchangés.
+- **Fourchettes de prix (2026-11-14) :** chaque offre affiche une plage selon la solution et le temps. Diagnostic 490 $ à 980 $ (490 $ restent crédités sur la première automatisation), première automatisation 1 900 $ à 3 900 $, suivi mensuel 149 $ à 349 $. La plage du diagnostic est un choix de l'assistant, à confirmer.
+- **Mise en avant du démarrage (2026-11-14) :** héros recentré sur le lancement d'entreprise, section `#demarrer` placée avant les situations PME, nouvelle section `#donne` (ce que l'IA change, avant/aujourd'hui), question de FAQ sur les outils qui changent vite.
 - **À confirmer (propriétaire) :** si le premier échange est gratuit, l'écrire ; décider d'un éventuel tarif de démarrage ; vérifier auprès des organismes les aides au démarrage avant d'afficher un montant (SADC, organisme de développement économique de la MRC, Futurpreneur : nommés sans montant).
 
 ## Fonctionnalité livrée — `custom-domain-email` (2026-11-12)
