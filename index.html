@@ -140,7 +140,8 @@ header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.94);backdro
 .worry dt{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-size:clamp(22px,2vw,28px);font-weight:700;line-height:1.2;letter-spacing:-.03em;text-wrap:balance}
 .worry dd{margin:0;color:var(--ink-2);font-size:17px;max-width:60ch}
 .start-path{margin-top:44px;padding:clamp(26px,3.4vw,44px);border-radius:28px;background:var(--ink);color:#fff;box-shadow:var(--shadow)}
-.start-path h3{margin:0 0 24px;font-size:clamp(24px,2.2vw,32px)}
+.start-path-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-bottom:24px}
+.start-path h3{margin:0;font-size:clamp(24px,2.2vw,32px)}
 .start-path ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(20px,3vw,44px);counter-reset:p}
 .start-path li{padding-top:18px;border-top:1px solid var(--moss);counter-increment:p}
 .start-path li::before{content:counter(p,decimal-leading-zero);display:block;margin-bottom:10px;color:var(--lime);font:700 14px "Bricolage Grotesque",sans-serif;letter-spacing:.06em}
@@ -152,6 +153,21 @@ header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.94);backdro
 .hero-start a{white-space:nowrap}
 .start-note{max-width:85ch;margin:22px 0 0;padding:16px 20px;border:1px solid var(--rule);border-radius:16px;background:var(--surface);color:var(--ink-2);font-size:16px}
 .start-note b{color:var(--ink)}
+
+/* offre de lancement : le premier client ne paie rien. Chaque élément porte data-premier-client ; les retirer tous quand la place est prise. */
+.launch-bar{background:var(--ink);color:#fff;font-size:15px;line-height:1.4}
+.launch-bar p{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 12px;margin:0 auto;padding-block:10px;text-align:center}
+.launch-bar b{color:var(--lime);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+.launch-bar a{color:var(--lime);font-weight:600;white-space:nowrap}
+.free-pill{display:inline-flex;min-height:44px;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--lime);border-radius:100px;color:var(--lime);font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.free-pill:hover{background:var(--lime);color:var(--ink)}
+.first-free{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px clamp(24px,4vw,64px);align-items:center;margin:0 0 36px;padding:clamp(24px,3vw,38px);border:1px solid var(--ink);border-radius:20px;background:var(--lime);box-shadow:var(--shadow)}
+.first-free .tag{display:inline-block;padding:6px 10px;border:1px solid var(--ink);border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.first-free h3{margin:16px 0 8px;font-size:clamp(26px,2.6vw,38px);font-weight:800}
+.first-free p{margin:0;max-width:62ch;color:var(--ink-2);font-size:17px}
+.first-free-side{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.first-free .zero{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(56px,6vw,88px);font-weight:800;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.first-free .zero small{display:block;margin-top:12px;color:var(--ink-2);font:500 15px/1.35 "Source Sans 3",sans-serif;letter-spacing:0}
 
 /* offres */
 #offres{background:var(--lime-soft)}
@@ -282,7 +298,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   #methode .method-layout{grid-template-columns:1fr}
   #pourqui .cards,.offers{grid-template-columns:1fr}
   #pourqui .card{min-height:270px}
-  .start-head,.worry,.start-path ol{grid-template-columns:1fr}
+  .start-head,.worry,.start-path ol,.first-free{grid-template-columns:1fr}
   .start-head{align-items:start;margin-bottom:30px}
   .offer.hi{transform:none}
   .why,.contact{grid-template-columns:1fr}
@@ -305,7 +321,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   #methode .steps{grid-template-columns:1fr}
   .offer{padding:27px 23px}
   .start-path{border-radius:22px}
-  .start-foot .btn{width:100%}
+  .start-foot .btn,.first-free .btn{width:100%}
+  .first-free-side{align-items:stretch}
+  .launch-bar{font-size:14px}
+  .launch-bar b{display:none}
+  .launch-bar p{padding-block:9px}
   .contact-card{padding:25px}
 }
 @media print{
@@ -360,6 +380,10 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 
 <body>
 <a class="skip-link" href="#top">Passer au contenu</a>
+<!-- Offre premier client : retirer ce bandeau quand la place est prise -->
+<aside class="launch-bar" data-premier-client aria-label="Offre de lancement">
+  <p class="wrap"><b>Offre de lancement</b> <span>Notre premier client ne paie rien. Une seule place.</span> <a href="#premier-client">Voir l’offre <span aria-hidden="true">→</span></a></p>
+</aside>
 <header>
   <div class="wrap hd">
     <a class="brand" href="#top" aria-label="Gilbert, accueil">
@@ -455,7 +479,11 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         <div class="worry reveal"><dt>« Je n’ai pas le budget d’une grande entreprise. »</dt><dd>On commence par une seule tâche, celle qui vous aide le plus, et le prix est connu avant de commencer. Le premier échange de 20 minutes ne vous engage à rien.</dd></div>
       </dl>
       <div class="start-path reveal">
-        <h3>Par où commencer</h3>
+        <div class="start-path-head">
+          <h3>Par où commencer</h3>
+          <!-- Offre premier client : retirer ce lien quand la place est prise -->
+          <a class="free-pill" href="#premier-client" data-premier-client>Premier client : gratuit · une seule place <span aria-hidden="true">→</span></a>
+        </div>
         <ol role="list">
           <li><b>On parle de votre projet</b><span>Un échange de 20 minutes, sans engagement. Pas besoin d’avoir déjà des clients ni une entreprise enregistrée.</span></li>
           <li><b>On choisit une première tâche</b><span>Celle qui vous aidera le plus au départ : répondre aux demandes, préparer une soumission, envoyer une facture, prendre un rendez-vous.</span></li>
@@ -473,6 +501,18 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     <div class="wrap">
       <h2 class="reveal">Trois offres, trois prix</h2>
       <p class="sub reveal">Chaque offre précise le livrable, la durée et le prix. Pour les projets dont le coût varie, le montant est confirmé après le diagnostic. Taxes en sus.</p>
+      <!-- Offre premier client : retirer ce bloc quand la place est prise -->
+      <aside class="first-free reveal" id="premier-client" data-premier-client aria-labelledby="premier-client-titre">
+        <div>
+          <span class="tag">Offre de lancement · une seule place</span>
+          <h3 id="premier-client-titre">Notre premier client ne paie rien.</h3>
+          <p>Le diagnostic et la première automatisation sont offerts au premier projet qu’on démarre ensemble, que votre entreprise soit établie ou encore une idée. Il n’y a qu’une place. Une fois prise, les prix affichés s’appliquent.</p>
+        </div>
+        <div class="first-free-side">
+          <div class="zero">0 $ <small>au lieu de 1 900 $ à 3 900 $</small></div>
+          <a class="btn" href="#contact">Prendre la place <span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
       <div class="offers">
         <article class="offer reveal">
           <span class="tag">Pour commencer</span>
@@ -600,6 +640,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         <h2>Parlons de votre semaine</h2>
         <p class="sub">Un premier échange de 20 minutes pour comprendre la tâche, vos outils et vos contraintes. On vous explique ce qui peut être automatisé et le coût d’un éventuel mandat.</p>
         <p>Écrivez-nous en décrivant la tâche qui vous prend le plus de temps, ou votre projet si vous démarrez. On vous répondra pour préciser la suite, sans engagement.</p>
+        <!-- Offre premier client : retirer ce paragraphe quand la place est prise -->
+        <p data-premier-client><b>La place gratuite du premier client est encore libre.</b> Écrivez-nous avant qu’elle soit prise.</p>
       </div>
       <div class="contact-card reveal">
         <span class="contact-icon" aria-hidden="true">↗</span>
