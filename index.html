@@ -197,6 +197,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.94);backdro
 .offer .dur{color:var(--ink-3);font-size:15px;margin-bottom:14px}
 .offer .price{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(28px,2.5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
 .offer .price span{white-space:nowrap}
+.offer .price .from{display:block;font:600 16px/1.2 "Source Sans 3",Arial,sans-serif;letter-spacing:0;margin-bottom:4px}
 .offer .price small{display:block;margin-top:8px;font-size:15px;font-weight:500;line-height:1.35;color:var(--ink-3);font-family:"Source Sans 3",sans-serif;letter-spacing:0}
 .offer ul{margin:26px 0 18px;padding-left:20px;color:var(--ink-2);font-size:16px}
 .offer li{margin-bottom:10px}
@@ -364,7 +365,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       "url": "https://gilbert-solution.ca/",
       "image": "https://gilbert-solution.ca/assets/gilbert-hero-direction.png",
       "email": "zacharie@gilbert-solution.ca",
-      "description": "Automatisation par IA pour les PME et les entreprises en démarrage, un processus à la fois. Diagnostic, première automatisation et suivi mensuel, avec des fourchettes de prix affichées.",
+      "description": "Automatisation par IA pour les PME et les entreprises en démarrage, un processus à la fois. Diagnostic, première automatisation et suivi mensuel, avec un prix minimum affiché pour chaque offre.",
       "address": {"@type": "PostalAddress", "addressRegion": "QC", "addressCountry": "CA"},
       "areaServed": [
         {"@type": "City", "name": "Victoriaville"},
@@ -373,9 +374,9 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       ],
       "priceRange": "$$",
       "makesOffer": [
-        {"@type": "Offer", "name": "Diagnostic", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "490", "maxPrice": "980", "priceCurrency": "CAD"}},
-        {"@type": "Offer", "name": "Première automatisation", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "1900", "maxPrice": "3900", "priceCurrency": "CAD"}},
-        {"@type": "Offer", "name": "Suivi mensuel", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "149", "maxPrice": "349", "priceCurrency": "CAD", "unitText": "mois"}}
+        {"@type": "Offer", "name": "Diagnostic", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "490", "priceCurrency": "CAD"}},
+        {"@type": "Offer", "name": "Première automatisation", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "1900", "priceCurrency": "CAD"}},
+        {"@type": "Offer", "name": "Suivi mensuel", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "149", "priceCurrency": "CAD", "unitText": "mois"}}
       ]
     },
     {
@@ -386,7 +387,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         {"@type": "Question", "name": "Combien de temps avant que ça fonctionne ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic prend entre une demi-journée et une journée, selon la taille du projet, et permet de repartir avec un plan. Une première automatisation prend généralement deux à trois semaines, selon le périmètre et les outils utilisés. Le calendrier est confirmé après le diagnostic."}},
         {"@type": "Question", "name": "Et si ça brise ?", "acceptedAnswer": {"@type": "Answer", "text": "Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. Les modalités de surveillance et les validations sont définies avec vous."}},
         {"@type": "Question", "name": "Et si on arrête le suivi mensuel ?", "acceptedAnswer": {"@type": "Answer", "text": "Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation."}},
-        {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque offre affiche une fourchette. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}},
+        {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque offre affiche un prix minimum. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}},
         {"@type": "Question", "name": "Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit."}},
         {"@type": "Question", "name": "Je ne connais rien à l’informatique. Est-ce un problème ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer."}},
         {"@type": "Question", "name": "Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile ?", "acceptedAnswer": {"@type": "Answer", "text": "On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens : les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations."}}
@@ -468,7 +469,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 
       <div class="proof">
         <div><b>Un processus à la fois</b><span>On commence par une tâche précise et on définit le périmètre ensemble.</span></div>
-        <div><b>Prix affichés</b><span>Les fourchettes de prix sont affichées et le montant exact est confirmé avant le début du mandat.</span></div>
+        <div><b>Prix affichés</b><span>Un prix minimum est affiché pour chaque offre, et le montant exact est confirmé avant le début du mandat.</span></div>
         <div><b>Vous gardez la main</b><span>Vous conservez les accès et la documentation de l’automatisation livrée.</span></div>
         <div><b>Proche de vous</b><span>sur place à Victoriaville, Plessisville et dans la région ; à distance partout</span></div>
       </div>
@@ -545,8 +546,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 
   <section id="offres">
     <div class="wrap">
-      <h2 class="reveal">Trois offres, trois fourchettes de prix</h2>
-      <p class="sub reveal">Chaque offre précise le livrable, la durée et une fourchette de prix. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Il est confirmé avant le début du travail. Taxes en sus.</p>
+      <h2 class="reveal">Trois offres, chacune avec un prix minimum</h2>
+      <p class="sub reveal">Chaque offre précise le livrable, la durée et son prix minimum. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Il est confirmé avant le début du travail. Taxes en sus.</p>
       <!-- Offre premier client : retirer ce bloc quand la place est prise -->
       <aside class="first-free reveal" id="premier-client" data-premier-client aria-labelledby="premier-client-titre">
         <div>
@@ -555,7 +556,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <p>Le diagnostic et la première automatisation sont offerts au premier projet qu’on démarre ensemble, que votre entreprise soit établie ou encore une idée. Il n’y a qu’une place. Une fois prise, les prix affichés s’appliquent.</p>
         </div>
         <div class="first-free-side">
-          <div class="zero">0 $ <small>au lieu de 1 900 $ à 4 390 $, diagnostic compris</small></div>
+          <div class="zero">0 $ <small>au lieu d’au moins 1 900 $, diagnostic compris</small></div>
           <a class="btn" href="#contact">Prendre la place <span aria-hidden="true">→</span></a>
         </div>
       </aside>
@@ -564,7 +565,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="tag">Pour commencer</span>
           <h3>Diagnostic</h3>
           <div class="dur">Une demi-journée à une journée · sur place ou à distance</div>
-          <div class="price"><span>490 $</span> <span>à 980 $</span><small>selon le nombre de tâches et d’outils à examiner&nbsp;· 490&nbsp;$ crédités sur la première automatisation</small></div>
+          <div class="price"><span class="from">À partir de</span><span>490 $</span><small>selon le nombre de tâches et d’outils à examiner&nbsp;· 490&nbsp;$ crédités sur la première automatisation</small></div>
           <ul>
             <li>On passe en revue votre semaine, les tâches et les outils utilisés.</li>
             <li>Trois tâches à évaluer en priorité, avec une estimation du temps qu’elles mobilisent.</li>
@@ -577,7 +578,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="tag">Du cadrage à la formation</span>
           <h3>Première automatisation</h3>
           <div class="dur">2 à 3 semaines · un processus complet</div>
-          <div class="price"><span>1 900 $</span> <span>à 3 900 $</span><small>selon la solution retenue et le temps qu’elle demande&nbsp;· montant confirmé après le diagnostic</small></div>
+          <div class="price"><span class="from">À partir de</span><span>1 900 $</span><small>selon la solution retenue et le temps qu’elle demande&nbsp;· montant confirmé après le diagnostic</small></div>
           <ul>
             <li>Un processus automatisé de bout en bout : courriels, soumissions, facturation, rapports, saisie, rendez-vous</li>
             <li>Connecté à vos outils actuels (Outlook ou Gmail, Excel, comptabilité, CRM).</li>
@@ -590,7 +591,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="tag">Option de suivi</span>
           <h3>Suivi mensuel</h3>
           <div class="dur">Sans engagement après 3 mois</div>
-          <div class="price"><span>149 $</span> <span>à 349 $</span><small>par mois, selon le nombre d’automatisations et le temps de suivi qu’elles demandent</small></div>
+          <div class="price"><span class="from">À partir de</span><span>149 $</span><small>par mois, selon le nombre d’automatisations et le temps de suivi qu’elles demandent</small></div>
           <ul>
             <li>Surveillance et avis si un blocage est détecté.</li>
             <li>Correctifs, petites améliorations et coûts d'hébergement et d'IA inclus jusqu'au seuil convenu</li>
@@ -674,7 +675,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <details class="reveal"><summary>Combien de temps avant que ça fonctionne ?</summary><p>Le diagnostic prend entre une demi-journée et une journée, selon la taille du projet, et vous repartez avec le plan. Une première automatisation prend généralement deux à trois semaines, selon le périmètre et les outils utilisés. Le calendrier est confirmé après le diagnostic.</p></details>
       <details class="reveal"><summary>Et si ça brise ?</summary><p>Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. </p></details>
       <details class="reveal"><summary>Et si on arrête le suivi mensuel ?</summary><p>Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation. Les frais éventuels d'hébergement et d'IA sont ensuite payés directement à vos fournisseurs.</p></details>
-      <details class="reveal"><summary>Comment les prix sont-ils fixés ?</summary><p>Chaque offre affiche une fourchette. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit.</p></details>
+      <details class="reveal"><summary>Comment les prix sont-ils fixés ?</summary><p>Chaque offre affiche un prix minimum. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit.</p></details>
       <details class="reveal"><summary>Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?</summary><p>Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit.</p></details>
       <details class="reveal"><summary>Je ne connais rien à l’informatique. Est-ce un problème ?</summary><p>Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer.</p></details>
       <details class="reveal"><summary>Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile&nbsp;?</summary><p>On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens&nbsp;: les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations.</p></details>
