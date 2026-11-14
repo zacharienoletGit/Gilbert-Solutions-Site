@@ -1,6 +1,6 @@
 # Gilbert — Solutions IA
 
-Site vitrine d'une page pour Gilbert, automatisation par IA pour les PME du Centre-du-Québec.
+Site vitrine d'une page pour Gilbert, automatisation par IA pour les PME et les entreprises en démarrage du Centre-du-Québec.
 
 ## Structure
 

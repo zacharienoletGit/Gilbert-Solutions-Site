@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6f5ef">
-<title>Gilbert Solutions IA | Automatisation pour PME</title>
-<meta name="description" content="Gilbert accompagne les PME du Centre-du-Québec dans l’automatisation de tâches répétitives. Une tâche à la fois, avec un périmètre et un prix convenus avant de commencer.">
+<title>Gilbert Solutions IA | Automatisation pour PME et entreprises en démarrage</title>
+<meta name="description" content="Gilbert accompagne les PME et les personnes qui lancent leur entreprise au Centre-du-Québec. On automatise les tâches répétitives une à la fois, avec un périmètre et un prix convenus avant de commencer.">
 <link rel="canonical" href="https://gilbert-solution.ca/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/gilbert-mark.svg">
@@ -13,15 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Gilbert — Solutions IA">
-<meta property="og:title" content="Gilbert Solutions IA | Automatisation pour PME">
-<meta property="og:description" content="Automatisation pour PME du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
+<meta property="og:title" content="Gilbert Solutions IA | Automatisation pour PME et entreprises en démarrage">
+<meta property="og:description" content="Automatisation pour les PME et les entreprises en démarrage du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
 <meta property="og:url" content="https://gilbert-solution.ca/">
 <meta property="og:image" content="https://gilbert-solution.ca/assets/gilbert-hero-direction.png">
 <meta property="og:image:width" content="1672">
 <meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gilbert Solutions IA | Automatisation pour PME">
-<meta name="twitter:description" content="Automatisation pour PME du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
+<meta name="twitter:title" content="Gilbert Solutions IA | Automatisation pour PME et entreprises en démarrage">
+<meta name="twitter:description" content="Automatisation pour les PME et les entreprises en démarrage du Centre-du-Québec. Des offres présentées clairement et un projet cadré avant le début du travail.">
 <meta name="twitter:image" content="https://gilbert-solution.ca/assets/gilbert-hero-direction.png">
 
 
@@ -129,6 +129,46 @@ header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.94);backdro
 #pourqui .card h3{margin:auto 0 6px;font-size:clamp(23px,2vw,29px);line-height:1.2}
 #pourqui .card p{margin:0;color:var(--ink-2);font-size:16px}
 
+/* démarrage : pour les personnes qui lancent leur entreprise */
+#demarrer{background:var(--paper)}
+.start-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px clamp(32px,5vw,80px);align-items:end;margin-bottom:40px}
+.start-head h2{margin:0}
+.start-head h2 em{font-style:normal;background:linear-gradient(transparent 70%,var(--lime) 70% 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.start-head .sub{margin:0}
+.worries{margin:0;border-bottom:1px solid var(--rule)}
+.worry{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px clamp(32px,5vw,80px);align-items:start;padding:26px 0;border-top:1px solid var(--rule)}
+.worry dt{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-size:clamp(22px,2vw,28px);font-weight:700;line-height:1.2;letter-spacing:-.03em;text-wrap:balance}
+.worry dd{margin:0;color:var(--ink-2);font-size:17px;max-width:60ch}
+.start-path{margin-top:44px;padding:clamp(26px,3.4vw,44px);border-radius:28px;background:var(--ink);color:#fff;box-shadow:var(--shadow)}
+.start-path-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-bottom:24px}
+.start-path h3{margin:0;font-size:clamp(24px,2.2vw,32px)}
+.start-path ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(20px,3vw,44px);counter-reset:p}
+.start-path li{padding-top:18px;border-top:1px solid var(--moss);counter-increment:p}
+.start-path li::before{content:counter(p,decimal-leading-zero);display:block;margin-bottom:10px;color:var(--lime);font:700 14px "Bricolage Grotesque",sans-serif;letter-spacing:.06em}
+.start-path li b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.start-path li span{display:block;margin-top:6px;color:#d5e0d6;font-size:16px}
+.start-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;margin-top:30px}
+.start-foot p{margin:0;max-width:58ch;color:#c6d2c7;font-size:15px}
+.hero-start{margin:18px 0 0;color:var(--ink-2);font-size:16px;font-weight:600}
+.hero-start a{white-space:nowrap}
+.start-note{max-width:85ch;margin:22px 0 0;padding:16px 20px;border:1px solid var(--rule);border-radius:16px;background:var(--surface);color:var(--ink-2);font-size:16px}
+.start-note b{color:var(--ink)}
+
+/* offre de lancement : le premier client ne paie rien. Chaque élément porte data-premier-client ; les retirer tous quand la place est prise. */
+.launch-bar{background:var(--ink);color:#fff;font-size:15px;line-height:1.4}
+.launch-bar p{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 12px;margin:0 auto;padding-block:10px;text-align:center}
+.launch-bar b{color:var(--lime);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+.launch-bar a{color:var(--lime);font-weight:600;white-space:nowrap}
+.free-pill{display:inline-flex;min-height:44px;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--lime);border-radius:100px;color:var(--lime);font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.free-pill:hover{background:var(--lime);color:var(--ink)}
+.first-free{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px clamp(24px,4vw,64px);align-items:center;margin:0 0 36px;padding:clamp(24px,3vw,38px);border:1px solid var(--ink);border-radius:20px;background:var(--lime);box-shadow:var(--shadow)}
+.first-free .tag{display:inline-block;padding:6px 10px;border:1px solid var(--ink);border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.first-free h3{margin:16px 0 8px;font-size:clamp(26px,2.6vw,38px);font-weight:800}
+.first-free p{margin:0;max-width:62ch;color:var(--ink-2);font-size:17px}
+.first-free-side{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.first-free .zero{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(56px,6vw,88px);font-weight:800;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.first-free .zero small{display:block;margin-top:12px;color:var(--ink-2);font:500 15px/1.35 "Source Sans 3",sans-serif;letter-spacing:0}
+
 /* offres */
 #offres{background:var(--lime-soft)}
 .offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -219,7 +259,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   .hero-copy h1{animation-delay:.06s}
   .hero-copy .lead{animation-delay:.12s}
   .hero-copy .cta{animation-delay:.18s}
-  .hero-copy .hero-note{animation-delay:.24s}
+  .hero-copy .hero-start{animation-delay:.22s}
+  .hero-copy .hero-note{animation-delay:.26s}
   .hero-art{animation:enter .9s .16s cubic-bezier(.22,1,.36,1) both}
   .desktop-nav a:not(.btn){position:relative}
   .desktop-nav a:not(.btn)::after{content:"";position:absolute;inset:auto 0 -5px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s}
@@ -257,6 +298,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   #methode .method-layout{grid-template-columns:1fr}
   #pourqui .cards,.offers{grid-template-columns:1fr}
   #pourqui .card{min-height:270px}
+  .start-head,.worry,.start-path ol,.first-free{grid-template-columns:1fr}
+  .start-head{align-items:start;margin-bottom:30px}
   .offer.hi{transform:none}
   .why,.contact{grid-template-columns:1fr}
   .table-hint{display:block}
@@ -277,6 +320,12 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   .proof div:first-child{border-top:0}
   #methode .steps{grid-template-columns:1fr}
   .offer{padding:27px 23px}
+  .start-path{border-radius:22px}
+  .start-foot .btn,.first-free .btn{width:100%}
+  .first-free-side{align-items:stretch}
+  .launch-bar{font-size:14px}
+  .launch-bar b{display:none}
+  .launch-bar p{padding-block:9px}
   .contact-card{padding:25px}
 }
 @media print{
@@ -297,7 +346,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       "url": "https://gilbert-solution.ca/",
       "image": "https://gilbert-solution.ca/assets/gilbert-hero-direction.png",
       "email": "zacharie_nolet@hotmail.fr",
-      "description": "Automatisation par IA pour les PME, un processus à la fois. Diagnostic, première automatisation et suivi mensuel à prix fixe.",
+      "description": "Automatisation par IA pour les PME et les entreprises en démarrage, un processus à la fois. Diagnostic, première automatisation et suivi mensuel à prix fixe.",
       "address": {"@type": "PostalAddress", "addressRegion": "QC", "addressCountry": "CA"},
       "areaServed": [
         {"@type": "City", "name": "Victoriaville"},
@@ -319,7 +368,9 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         {"@type": "Question", "name": "Combien de temps avant que ça fonctionne ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic prend une demi-journée et permet de repartir avec un plan. Une première automatisation prend généralement deux à trois semaines, selon le périmètre et les outils utilisés. Le calendrier est confirmé après le diagnostic."}},
         {"@type": "Question", "name": "Et si ça brise ?", "acceptedAnswer": {"@type": "Answer", "text": "Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. Les modalités de surveillance et les validations sont définies avec vous."}},
         {"@type": "Question", "name": "Et si on arrête le suivi mensuel ?", "acceptedAnswer": {"@type": "Answer", "text": "Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation."}},
-        {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mandat est défini autour d’un processus et d’un livrable précis. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}}
+        {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mandat est défini autour d’un processus et d’un livrable précis. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}},
+        {"@type": "Question", "name": "Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit."}},
+        {"@type": "Question", "name": "Je ne connais rien à l’informatique. Est-ce un problème ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer."}}
       ]
     }
   ]
@@ -329,6 +380,10 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 
 <body>
 <a class="skip-link" href="#top">Passer au contenu</a>
+<!-- Offre premier client : retirer ce bandeau quand la place est prise -->
+<aside class="launch-bar" data-premier-client aria-label="Offre de lancement">
+  <p class="wrap"><b>Offre de lancement</b> <span>Notre premier client ne paie rien. Une seule place.</span> <a href="#premier-client">Voir l’offre <span aria-hidden="true">→</span></a></p>
+</aside>
 <header>
   <div class="wrap hd">
     <a class="brand" href="#top" aria-label="Gilbert, accueil">
@@ -342,6 +397,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     </a>
     <nav class="desktop-nav" aria-label="Navigation principale">
       <a href="#pourqui">Pour qui</a>
+      <a href="#demarrer">Démarrer</a>
       <a href="#offres">Offres</a>
       <a href="#methode">Méthode</a>
       <a href="#subventions">Aides</a>
@@ -351,6 +407,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <summary>Menu <span class="menu-icon" aria-hidden="true"></span></summary>
       <nav aria-label="Navigation mobile">
         <a href="#pourqui">Pour qui</a>
+        <a href="#demarrer">Démarrer</a>
         <a href="#offres">Offres</a>
         <a href="#methode">Méthode</a>
         <a href="#subventions">Aides</a>
@@ -364,7 +421,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   <div class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="kick">Automatisation par IA · PME</p>
+        <p class="kick">Automatisation par IA · PME et entreprises en démarrage</p>
         <h1 aria-label="Automatiser les tâches répétitives, une à la fois.">
           <span class="hero-line" aria-hidden="true">Automatiser</span>
           <span class="hero-line" aria-hidden="true">les tâches</span>
@@ -376,6 +433,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <a class="btn" href="#contact">Décrire une tâche <span aria-hidden="true">→</span></a>
           <a class="btn ghost" href="#offres">Voir les trois offres</a>
         </div>
+        <p class="hero-start">Vous lancez votre entreprise&nbsp;? <a href="#demarrer">Voyez par où commencer</a></p>
         <p class="hero-note">Sur place dans un rayon de 100 km de Victoriaville · À distance partout.</p>
       </div>
 
@@ -408,10 +466,53 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
     </div>
   </section>
 
+  <section id="demarrer">
+    <div class="wrap">
+      <p class="kick reveal">Vous démarrez</p>
+      <div class="start-head">
+        <h2 class="reveal">Vous avez une idée&nbsp;? <em>Vous pouvez la lancer.</em></h2>
+        <p class="sub reveal">Bien des projets d’entreprise restent dans un tiroir parce qu’on croit qu’il faut une équipe, un gros budget ou des connaissances en informatique. Aujourd’hui, une personne seule peut répondre à ses clients, préparer ses soumissions et facturer avec quelques outils bien réglés. On les met en place avec vous.</p>
+      </div>
+      <dl class="worries">
+        <div class="worry reveal"><dt>« Je n’ai pas d’équipe. Je ne peux pas tout faire. »</dt><dd>Les réponses aux demandes, les soumissions, les factures et les rappels peuvent être préparés automatiquement. Vous vérifiez et vous envoyez. Votre temps reste pour votre métier et vos clients.</dd></div>
+        <div class="worry reveal"><dt>« Je ne connais rien à l’informatique. »</dt><dd>Ce n’est pas nécessaire. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page.</dd></div>
+        <div class="worry reveal"><dt>« Je n’ai pas le budget d’une grande entreprise. »</dt><dd>On commence par une seule tâche, celle qui vous aide le plus, et le prix est connu avant de commencer. Le premier échange de 20 minutes ne vous engage à rien.</dd></div>
+      </dl>
+      <div class="start-path reveal">
+        <div class="start-path-head">
+          <h3>Par où commencer</h3>
+          <!-- Offre premier client : retirer ce lien quand la place est prise -->
+          <a class="free-pill" href="#premier-client" data-premier-client>Premier client : gratuit · une seule place <span aria-hidden="true">→</span></a>
+        </div>
+        <ol role="list">
+          <li><b>On parle de votre projet</b><span>Un échange de 20 minutes, sans engagement. Pas besoin d’avoir déjà des clients ni une entreprise enregistrée.</span></li>
+          <li><b>On choisit une première tâche</b><span>Celle qui vous aidera le plus au départ : répondre aux demandes, préparer une soumission, envoyer une facture, prendre un rendez-vous.</span></li>
+          <li><b>Vous partez sur de bonnes bases</b><span>Les outils sont à vous, avec les accès et le guide. Vous ajoutez le reste quand l’entreprise grandit.</span></li>
+        </ol>
+        <div class="start-foot">
+          <p>On ne peut pas promettre qu’une entreprise réussira. On peut alléger le travail de bureau qui empêche souvent de commencer.</p>
+          <a class="btn lime" href="#contact">Parler de mon projet <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="offres">
     <div class="wrap">
       <h2 class="reveal">Trois offres, trois prix</h2>
       <p class="sub reveal">Chaque offre précise le livrable, la durée et le prix. Pour les projets dont le coût varie, le montant est confirmé après le diagnostic. Taxes en sus.</p>
+      <!-- Offre premier client : retirer ce bloc quand la place est prise -->
+      <aside class="first-free reveal" id="premier-client" data-premier-client aria-labelledby="premier-client-titre">
+        <div>
+          <span class="tag">Offre de lancement · une seule place</span>
+          <h3 id="premier-client-titre">Notre premier client ne paie rien.</h3>
+          <p>Le diagnostic et la première automatisation sont offerts au premier projet qu’on démarre ensemble, que votre entreprise soit établie ou encore une idée. Il n’y a qu’une place. Une fois prise, les prix affichés s’appliquent.</p>
+        </div>
+        <div class="first-free-side">
+          <div class="zero">0 $ <small>au lieu de 1 900 $ à 3 900 $</small></div>
+          <a class="btn" href="#contact">Prendre la place <span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
       <div class="offers">
         <article class="offer reveal">
           <span class="tag">Pour commencer</span>
@@ -453,6 +554,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <div class="sub-badge"><b>Inclus</b>Rapport mensuel d'une page : ce qui a tourné, ce qui a été corrigé, les heures récupérées</div>
         </article>
       </div>
+      <p class="start-note reveal"><b>Vous démarrez&nbsp;?</b> Commencez par le premier échange de 20 minutes. On regarde votre projet et on vous dit franchement si un diagnostic est utile maintenant ou s’il vaut mieux attendre. <a href="#demarrer">Voir par où commencer</a></p>
     </div>
   </section>
 
@@ -513,6 +615,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <tr><td><b>LIFT — numérique et IA</b><span class="org">BDC</span></td><td>Prêt pour un projet numérique ou IA avec fournisseur canadien</td><td>25 000 $ à 2 M$, remboursement différé</td><td>Revenus ≥ 1 M$ · plan BDC</td></tr>
         </tbody>
       </table></div>
+      <p class="start-note reveal"><b>Vous démarrez&nbsp;?</b> Ces programmes visent surtout des entreprises déjà en activité. Pour un démarrage, la SADC et l’organisme de développement économique de votre MRC accompagnent les personnes qui se lancent, et Futurpreneur s’adresse aux 18 à 39 ans. On peut vous indiquer à qui vous adresser.</p>
       <p class="note">Montants et critères indicatifs, en date d'octobre 2026. Chaque programme a ses propres règles : on les vérifie avec l'organisme pour chaque dossier. Gilbert ne garantit aucune aide.</p>
     </div>
   </section>
@@ -526,6 +629,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <details class="reveal"><summary>Et si ça brise ?</summary><p>Trente jours de correctifs sont inclus avec chaque automatisation. Avec le suivi mensuel, on surveille les erreurs détectées et on vous avise lorsqu’une intervention est nécessaire. </p></details>
       <details class="reveal"><summary>Et si on arrête le suivi mensuel ?</summary><p>Vos automatisations continuent de fonctionner : elles vous appartiennent, avec les accès et la documentation. Les frais éventuels d'hébergement et d'IA sont ensuite payés directement à vos fournisseurs.</p></details>
       <details class="reveal"><summary>Comment les prix sont-ils fixés ?</summary><p>Chaque mandat est défini autour d’un processus et d’un livrable précis. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit.</p></details>
+      <details class="reveal"><summary>Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?</summary><p>Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit.</p></details>
+      <details class="reveal"><summary>Je ne connais rien à l’informatique. Est-ce un problème ?</summary><p>Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer.</p></details>
     </div>
   </section>
 
@@ -534,13 +639,15 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <div class="reveal">
         <h2>Parlons de votre semaine</h2>
         <p class="sub">Un premier échange de 20 minutes pour comprendre la tâche, vos outils et vos contraintes. On vous explique ce qui peut être automatisé et le coût d’un éventuel mandat.</p>
-        <p>Écrivez-nous en décrivant la tâche qui vous prend le plus de temps. On vous répondra pour préciser la suite, sans engagement.</p>
+        <p>Écrivez-nous en décrivant la tâche qui vous prend le plus de temps, ou votre projet si vous démarrez. On vous répondra pour préciser la suite, sans engagement.</p>
+        <!-- Offre premier client : retirer ce paragraphe quand la place est prise -->
+        <p data-premier-client><b>La place gratuite du premier client est encore libre.</b> Écrivez-nous avant qu’elle soit prise.</p>
       </div>
       <div class="contact-card reveal">
         <span class="contact-icon" aria-hidden="true">↗</span>
         <h3>Décrivez la tâche qui revient le plus souvent.</h3>
-        <p>On regarde avec vous si l’automatisation peut convenir à cette tâche.</p>
-        <a class="btn lime" href="mailto:zacharie_nolet@hotmail.fr?subject=Parlons%20automatisation%20avec%20Gilbert&amp;body=Bonjour%20Zacharie%2C%0A%0ALa%20t%C3%A2che%20qui%20me%20prend%20le%20plus%20de%20temps%20%3A%20%0A%0AMon%20entreprise%20%3A%20%0AMes%20logiciels%20%3A%20%0A%0AMerci%20!">Écrire à Zacharie ↗</a>
+        <p>On regarde avec vous si l’automatisation peut convenir à cette tâche. Vous démarrez&nbsp;? Décrivez simplement votre projet.</p>
+        <a class="btn lime" href="mailto:zacharie_nolet@hotmail.fr?subject=Parlons%20automatisation%20avec%20Gilbert&amp;body=Bonjour%20Zacharie%2C%0A%0ALa%20t%C3%A2che%20qui%20me%20prend%20le%20plus%20de%20temps%20%3A%20%0A%0AMon%20entreprise%20ou%20mon%20projet%20%3A%20%0AMes%20logiciels%20%3A%20%0A%0AMerci%20!">Écrire à Zacharie ↗</a>
         <a class="contact-email" href="mailto:zacharie_nolet@hotmail.fr">zacharie_nolet@hotmail.fr</a>
       </div>
     </div>
