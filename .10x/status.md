@@ -8,6 +8,13 @@
 - **ADR :** ADR-001 accepté.
 - **Plan :** quatre lots ordonnés dans la décision Engineering Manager.
 
+## Fonctionnalité en attente de fusion — `demarrage-entreprises` (2026-11-14)
+
+- **But :** parler aussi aux personnes qui lancent leur entreprise et leur donner confiance qu'elles peuvent commencer.
+- **Fait (branche `feature/cool-noether-o0iedv`) :** section `#demarrer` dans `index.html`, lien « Démarrer » dans les deux menus, mention dans le héros, les offres, les aides, la FAQ (deux questions, aussi dans le JSON-LD), le contact et les métadonnées.
+- **Aucun nouveau prix :** l'entrée proposée est le premier échange de 20 minutes déjà annoncé.
+- **À confirmer (propriétaire) :** si le premier échange est gratuit, l'écrire ; décider d'un éventuel tarif de démarrage ; vérifier auprès des organismes les aides au démarrage avant d'afficher un montant (SADC, organisme de développement économique de la MRC, Futurpreneur : nommés sans montant).
+
 ## Fonctionnalité livrée — `custom-domain-email` (2026-11-12)
 
 - **Phase :** Delivery Complete pour le site ; courriel partiellement en place.
