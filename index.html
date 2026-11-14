@@ -50,6 +50,7 @@ h2{font-size:clamp(34px,3.7vw,58px);line-height:1.07;font-weight:800;margin:0 0 
 h3{line-height:1.18}
 a{color:var(--moss);text-underline-offset:3px}
 :focus-visible{outline:3px solid var(--moss);outline-offset:4px;border-radius:3px}
+.launch-bar :focus-visible,.start-path :focus-visible{outline-color:var(--lime)}
 .wrap{max-width:1400px;margin:0 auto;padding-inline:24px}
 .skip-link{position:absolute;top:-60px;left:16px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px}
 .skip-link:focus{top:12px}
@@ -303,7 +304,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   .mobile-nav summary::-webkit-details-marker{display:none}
   .menu-icon{width:16px;height:12px;border-block:2px solid}
   .mobile-nav[open] .menu-icon{height:2px;border-bottom:0;transform:rotate(45deg)}
-  .mobile-nav nav{position:absolute;top:calc(100% + 12px);right:0;display:grid;width:min(280px,calc(100vw - 48px));gap:2px;padding:12px;border:1px solid var(--rule);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+  .mobile-nav nav{position:absolute;top:calc(100% + 12px);right:0;display:grid;width:min(280px,calc(100vw - 48px));max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);overflow-y:auto;overscroll-behavior:contain;gap:2px;padding:12px;border:1px solid var(--rule);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
   .mobile-nav nav a{min-height:44px;display:flex;align-items:center;padding:10px 12px;border-radius:8px;color:var(--ink);font-size:15px;font-weight:600;text-decoration:none}
   .mobile-nav nav a:hover{background:var(--lime-soft)}
   .hero>.wrap{grid-template-columns:1fr;gap:0}
@@ -388,7 +389,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         {"@type": "Question", "name": "Comment les prix sont-ils fixés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque offre affiche une fourchette. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit."}},
         {"@type": "Question", "name": "Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit."}},
         {"@type": "Question", "name": "Je ne connais rien à l’informatique. Est-ce un problème ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer."}},
-        {"@type": "Question", "name": "Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile ?", "acceptedAnswer": {"@type": "Answer", "text": "On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens : les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et que vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations."}}
+        {"@type": "Question", "name": "Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile ?", "acceptedAnswer": {"@type": "Answer", "text": "On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens : les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations."}}
       ]
     }
   ]
@@ -396,8 +397,8 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
 </script>
 </head>
 
-<body>
-<a class="skip-link" href="#top">Passer au contenu</a>
+<body id="top">
+<a class="skip-link" href="#contenu">Passer au contenu</a>
 <!-- Offre premier client : retirer ce bandeau quand la place est prise -->
 <aside class="launch-bar" data-premier-client aria-label="Offre de lancement">
   <p class="wrap"><b>Offre de lancement</b> <span>Notre premier client ne paie rien. Une seule place.</span> <a href="#premier-client">Voir l’offre <span aria-hidden="true">→</span></a></p>
@@ -437,7 +438,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
   </div>
 </header>
 
-<main id="top">
+<main id="contenu">
   <div class="hero">
     <div class="wrap">
       <div class="hero-copy">
@@ -448,7 +449,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="hero-line" aria-hidden="true">une vraie</span>
           <span class="hero-line highlight" aria-hidden="true">entreprise.</span>
         </h1>
-        <p class="lead">L’IA permet maintenant à une personne seule de faire une bonne partie du travail qui demandait une équipe : répondre aux clients, préparer des soumissions, facturer. On vous aide à la mettre au travail, même sans gros budget ni connaissances techniques.</p>
+        <p class="lead">L’IA permet maintenant à une personne seule de faire une bonne partie du travail qui demandait une équipe&nbsp;: répondre aux clients, préparer des soumissions, facturer. On vous aide à la mettre au travail, même sans gros budget ni connaissances techniques.</p>
         <div class="cta">
           <a class="btn" href="#contact">Parler de mon projet <span aria-hidden="true">→</span></a>
           <a class="btn ghost" href="#demarrer">Voir comment on vous aide</a>
@@ -510,7 +511,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <p class="kick reveal">La donne change</p>
       <div class="start-head">
         <h2 class="reveal">L’IA progresse vite. <em>Démarrer devient plus accessible.</em></h2>
-        <p class="sub reveal">Les outils d’IA font de plus en plus de choses qui demandaient hier du temps, de l’argent ou une équipe. On ne peut pas prédire la suite, mais la direction est claire : l’écart entre une grande entreprise et une personne qui démarre tend à rétrécir.</p>
+        <p class="sub reveal">Les outils d’IA font de plus en plus de choses qui demandaient hier du temps, de l’argent ou une équipe. On ne peut pas prédire la suite, mais la direction est claire&nbsp;: l’écart entre une grande entreprise et une personne qui démarre tend à rétrécir.</p>
       </div>
       <ul class="shift" role="list">
         <li class="reveal"><b class="task">Répondre aux demandes des clients</b><p class="then"><span>Avant</span>Y passer ses soirées, ou embaucher quelqu’un.</p><p class="now"><span>Aujourd’hui</span>Un assistant prépare les réponses. Vous vérifiez et vous envoyez.</p></li>
@@ -524,7 +525,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
         <div class="shift-point reveal"><h3>Gardez la main</h3><p>Vous conservez les accès et la documentation de ce qui est livré. Vous n’êtes pas enfermé chez nous.</p></div>
       </div>
       <div class="shift-foot reveal">
-        <p>On ne vend pas de miracle. L’IA ne remplace ni votre idée ni votre travail : elle enlève une partie du travail répétitif qui empêche de commencer.</p>
+        <p>On ne vend pas de miracle. L’IA ne remplace ni votre idée ni votre travail&nbsp;: elle enlève une partie du travail répétitif qui empêche de commencer.</p>
         <a class="btn lime" href="#contact">Parler de mon projet <span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -554,7 +555,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <p>Le diagnostic et la première automatisation sont offerts au premier projet qu’on démarre ensemble, que votre entreprise soit établie ou encore une idée. Il n’y a qu’une place. Une fois prise, les prix affichés s’appliquent.</p>
         </div>
         <div class="first-free-side">
-          <div class="zero">0 $ <small>au lieu de 1 900 $ à 3 900 $</small></div>
+          <div class="zero">0 $ <small>au lieu de 1 900 $ à 4 390 $, diagnostic compris</small></div>
           <a class="btn" href="#contact">Prendre la place <span aria-hidden="true">→</span></a>
         </div>
       </aside>
@@ -563,7 +564,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="tag">Pour commencer</span>
           <h3>Diagnostic</h3>
           <div class="dur">Une demi-journée à une journée · sur place ou à distance</div>
-          <div class="price"><span>490 $</span> <span>à 980 $</span><small>selon le nombre de tâches et d’outils à examiner · 490 $ crédités sur la première automatisation</small></div>
+          <div class="price"><span>490 $</span> <span>à 980 $</span><small>selon le nombre de tâches et d’outils à examiner&nbsp;· 490&nbsp;$ crédités sur la première automatisation</small></div>
           <ul>
             <li>On passe en revue votre semaine, les tâches et les outils utilisés.</li>
             <li>Trois tâches à évaluer en priorité, avec une estimation du temps qu’elles mobilisent.</li>
@@ -576,7 +577,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
           <span class="tag">Du cadrage à la formation</span>
           <h3>Première automatisation</h3>
           <div class="dur">2 à 3 semaines · un processus complet</div>
-          <div class="price"><span>1 900 $</span> <span>à 3 900 $</span><small>selon la solution retenue et le temps qu’elle demande · montant confirmé après le diagnostic</small></div>
+          <div class="price"><span>1 900 $</span> <span>à 3 900 $</span><small>selon la solution retenue et le temps qu’elle demande&nbsp;· montant confirmé après le diagnostic</small></div>
           <ul>
             <li>Un processus automatisé de bout en bout : courriels, soumissions, facturation, rapports, saisie, rendez-vous</li>
             <li>Connecté à vos outils actuels (Outlook ou Gmail, Excel, comptabilité, CRM).</li>
@@ -676,7 +677,7 @@ footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 2
       <details class="reveal"><summary>Comment les prix sont-ils fixés ?</summary><p>Chaque offre affiche une fourchette. Le montant exact dépend de la solution retenue et du temps qu’elle demande. Après le diagnostic, vous connaissez le coût avant le début du travail. Si le projet dépasse ce qu’on peut prendre en charge, on vous le dit.</p></details>
       <details class="reveal"><summary>Je n’ai pas encore d’entreprise. Est-ce trop tôt pour vous écrire ?</summary><p>Non. On peut parler de votre projet avant même que l’entreprise soit enregistrée. Le premier échange sert à voir ce qui vous aiderait au départ. Si c’est trop tôt pour une automatisation, on vous le dit.</p></details>
       <details class="reveal"><summary>Je ne connais rien à l’informatique. Est-ce un problème ?</summary><p>Non. On explique chaque étape en mots simples, on met les outils en place avec vous et on vous remet un guide d’une page. Vous n’avez pas à apprendre à programmer.</p></details>
-      <details class="reveal"><summary>Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile ?</summary><p>On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens : les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et que vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations.</p></details>
+      <details class="reveal"><summary>Les outils d’IA changent vite. Mon investissement va-t-il devenir inutile&nbsp;?</summary><p>On ne peut pas garantir qu’un outil ne changera pas. Mais la plupart des changements vont dans le bon sens&nbsp;: les outils font plus de choses, souvent à moindre coût. C’est pourquoi on commence par une seule tâche, avec des outils courants, et vous gardez les accès et la documentation. Le suivi mensuel, en option, comprend de petites améliorations.</p></details>
     </div>
   </section>
 
