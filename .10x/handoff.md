@@ -7,7 +7,7 @@ La conception et ADR-001 sont approuvées. Implémenter les quatre lots de `deci
 ## Decisions
 
 - Source de vérité du site : `index.html`.
-- `Gilbert.html` (page doublon) a été supprimé le 2026-11-14 à la demande du propriétaire. Les anciens liens vers `/Gilbert.html` mènent à la page 404 de GitHub Pages.
+- `Gilbert.html` (page doublon, ancien prix fixe) a été remplacé le 2026-11-14, à la demande du propriétaire, par une page-relais : actualisation immédiate vers l'accueil, sans JavaScript, car GitHub Pages n'a pas de redirections serveur. Les anciens liens continuent de fonctionner.
 - Les secrets restent à configurer dans Cloudflare, jamais dans Git.
 - Le domaine personnalisé `gilbert-solution.ca` est déjà en service sur GitHub Pages depuis le 2026-11-12 (ADR-002). La zone DNS et le courriel sont chez WHC.
 
